@@ -1,0 +1,158 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+}
+
+header h1 {
+  margin-left: 2rem;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  margin-right: 2rem;
+  list-style: none;
+}
+
+header li {
+  margin-right: 0.5rem;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: red;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.profile h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile img {
+  height: 20rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile p {
+  font-size: 1.2rem;
+}
+
+@keyframes metalGear {
+  0% {
+    right: 40%;
+  }
+  50% {
+    right: -35%;
+    transform: rotateY(0deg);
+  }
+  51% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    right: 40%;
+    transform: rotateY(180deg);
+  }
+}
+
+#metal-gear {
+  height: 6rem;
+  position: relative;
+  animation: metalGear 5s infinite ease-in-out;
+}
+
+#quote {
+  font-style: italic;
+}
+
+#quote span {
+  font-style: normal;
+}
+
+@media only screen and (min-width: 1200px) {
+  header a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  .profile {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile h2 {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 3rem;
+  }
+
+  .profile p {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: -5rem;
+  }
+
+  #quote {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .profile img {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    height: 25rem;
+  }
+
+  @keyframes metalGear {
+    0% {
+      left: 0%;
+    }
+    50% {
+      left: 70%;
+      transform: rotateY(0deg);
+    }
+    51% {
+      transform: rotateY(180deg);
+    }
+    100% {
+      left: 0%;
+      transform: rotateY(180deg);
+    }
+  }
+  #metal-gear {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: -10rem;
+  }
+}
