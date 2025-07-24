@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About: Nick Vila</title>
+    <title>Nick Vila: About</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>Nick Vila</h1>
       <nav>
+        <h1><a href="index.html">Nick Vila</a></h1>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="index.html">Portfolio</a></li>
-          <li><a href="index.html">Contact</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="about-list">
-        <div class="card">
+      <div class="list-view">
+        <div class="card" id="post">
           <h2>Post-Production</h2>
           <iframe
             width="400"
@@ -40,7 +40,7 @@
             rapid growth in followers.
           </p>
         </div>
-        <div class="card">
+        <div class="card" id="vhs">
           <h2>VHS Tapes</h2>
           <iframe
             width="400"
@@ -61,10 +61,34 @@
             happier!
           </p>
         </div>
-        <div class="card">
+        <div class="card" id="hydro">
           <h2>Hydroponic Gardening</h2>
-          <img src="https://i.redd.it/h7nkc4m2uoy81.jpg" alt="Hydroponic Tower">
-          <p>Easily the most practical hobby I've ever picked up in my life. I'm fascinated by the science behind hydroponics. It's efficient, safe and incredibly therapeutic. I started this around 2019 - thank you COVID? 3D printed my own hydroponics tower and taught myself how to sustain healthy vegetables through much trial and error.</p>
+          <img
+            src="https://i.redd.it/h7nkc4m2uoy81.jpg"
+            alt="Hydroponic Tower"
+          />
+          <p>
+            Easily the most practical hobby I've ever picked up in my life. I'm
+            fascinated by the science behind hydroponics. It's efficient, safe
+            and incredibly therapeutic. I started this around 2019 - thank you
+            COVID? 3D printed my own hydroponics tower and taught myself how to
+            sustain healthy vegetables through much trial and error.
+          </p>
+        </div>
+        <div class="card" id="music">
+          <h2>Music</h2>
+          <img
+            src="https://i.scdn.co/image/ab67616d00001e02b006f089af4d18d351f06c60"
+            alt="Mahal by Glass Beams"
+          />
+          <p id="album-name"><em>"Mahal"</em> by Glass Beams</p>
+          <p>
+            My father raised me to have an appreciation for music - no matter
+            the genre. Teaching me various instruments and even taking me to see
+            live music on occasion. Unfortunately my interests in playing music
+            didn't last as long as I wish but my desire to find good tunes only
+            grows stronger the older I get.
+          </p>
         </div>
       </div>
     </main>

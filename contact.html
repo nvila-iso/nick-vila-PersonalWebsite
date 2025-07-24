@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nick Vila: Contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1><a href="index.html">Nick Vila</a></h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="contact-box">
+      <div class="contact-img">
+        <img src="imgs/contact.jpg" alt="" />
+        <p>Got something you wanna say!?</p>
+        <p>Please leave your contact info below and leave a message!</p>
+        <p>I'll get back to you as soon as possible.</p>
+      </div>
+
+      <form action="">
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Full Name"
+          required
+        />
+        <br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email Address"
+          required
+        />
+        <br />
+        <textarea
+          name="message"
+          placeholder="Leave a message!"
+          rows="5"
+        ></textarea>
+        <br />
+        <input class="submit-button" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

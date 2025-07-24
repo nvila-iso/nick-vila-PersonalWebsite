@@ -1,3 +1,11 @@
+:root {
+  --green: #3a5a40;
+  --dark-green: #344e41;
+  --white: #dad7cd;
+  --red: #f28482;
+  --dark-red: #ef476f;
+}
+
 * {
   box-sizing: content-box;
   margin: 0;
@@ -5,39 +13,41 @@
 }
 
 header {
-  background-color: green;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: var(--green);
+  color: var(--white);
   height: 3rem;
 }
 
-header h1 {
-  margin-left: 2rem;
-  font-size: 1.2rem;
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 0.3rem;
 }
 
 header ul {
   display: flex;
   justify-content: center;
-  margin-right: 2rem;
   list-style: none;
 }
 
 header li {
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
 }
 
 header a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   transition: color 0.3s ease-in-out;
   font-weight: bold;
 }
 
 header a:hover {
-  color: red;
+  color: var(--red);
+}
+
+header a:active {
+  color: var(--red);
 }
 
 main {
@@ -45,7 +55,8 @@ main {
   justify-content: center;
   align-items: center;
 }
-/* Homepage */
+/* Homepage --------------------------------- */
+
 .profile {
   width: 90%;
   display: flex;
@@ -69,6 +80,8 @@ main {
 .profile p {
   font-size: 1.2rem;
   text-align: justify;
+  margin-top: 2rem;
+  max-width: 80%;
 }
 
 @keyframes metalGear {
@@ -102,27 +115,28 @@ main {
   font-style: normal;
 }
 
-/* End of Homepage */
+/* End of Homepage --------------------------------- */
 
-/* About Page */
-.about-list {
+/* About Page --------------------------------- */
+.list-view {
   display: grid;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  gap: 20px;
 }
 
 .card {
-  border: 0.2rem green solid;
+  border: 0.2rem var(--dark-green) solid;
   width: 25rem;
   min-height: 30rem;
   border-radius: 0.6rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
 }
 
 .card h2 {
   text-align: center;
   padding: 0.3rem 0 0.3rem 0;
-  background-color: green;
-  color: white;
+  background-color: var(--green);
+  color: var(--white);
 }
 
 .card img {
@@ -132,67 +146,220 @@ main {
 .card p {
   padding: 0.5rem;
   text-align: justify;
+  font-size: 1.1rem;
 }
 
-@media only screen and (min-width: 1200px) {
-  header h1 {
-    font-size: 2rem;
+#album-name {
+  text-align: center;
+}
+
+/* End of About --------------------------------- */
+
+/* Portfolio Page --------------------------------- */
+
+#dnd-session-zero img {
+  background-color: black;
+}
+
+.card a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--dark-green);
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.card a:hover {
+  color: var(--red);
+}
+
+/* End of Portfolio --------------------------------- */
+
+/* Contact --------------------------------- */
+
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 1rem;
+  margin: 10rem auto;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form > input,
+textarea {
+  border: 2px var(--dark-green) solid;
+  padding: 10px;
+  width: 300px;
+}
+
+form input {
+  margin-top: 1rem;
+}
+
+form textarea {
+  margin-top: 1rem;
+}
+
+.submit-button {
+  margin-top: 1rem;
+  width: 8rem;
+  height: 1.5rem;
+  border: none;
+  background-color: var(--dark-green);
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: var(--red);
+  /* color: var(--dark-green); */
+}
+
+.contact-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-img img {
+  height: 9.4rem;
+}
+
+.contact-img p {
+  margin-top: 0.5rem;
+  width: 22rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contact-img p:nth-child(3) {
+  color: var(--dark-red);
+  font-weight: bold;
+}
+
+.contact-box p:first-of-type {
+  font-weight: bold;
+}
+
+/* End of Contact --------------------------------- */
+
+/* Media Queries --------------------------------- */
+
+@media only screen and (min-width: 768px) {
+  main {
   }
 
-  header a {
+  header li {
     font-size: 1.5rem;
-    margin-right: 1rem;
-  }
-  .profile {
-    width: 50%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
   }
 
-  .profile h2 {
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    font-size: 3rem;
+  .profile {
+    width: 60%;
   }
 
   .profile p {
-    grid-column: 1;
-    grid-row: 2;
+    margin-top: 2rem;
   }
+}
 
-  #quote {
-    grid-column: 1 / span 2;
-    grid-row: 4;
-    text-align: center;
-    margin-top: 0.5rem;
-  }
-
-  .profile img {
-    grid-column: 2;
-    grid-row: 2 / span 2;
-    height: 25rem;
+@media only screen and (min-width: 992px) {
+  main {
+    max-width: 88%;
     margin: 0 auto;
   }
 
-  /* @keyframes metalGear {
+  .profile {
+    margin-top: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5rem 1fr 1fr;
+    width: 75%;
+  }
+
+  .profile h2 {
+    font-size: 2.2rem;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  .profile p {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    margin-top: -10rem;
+    padding-right: 0.8rem;
+  }
+
+  .profile img {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  #quote {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+    text-align: center;
+  }
+  @keyframes metalGear {
     0% {
-      left: 0%;
+      right: 5%;
     }
     50% {
-      left: 70%;
+      right: -120%;
       transform: rotateY(0deg);
     }
     51% {
       transform: rotateY(180deg);
     }
     100% {
-      left: 0%;
+      right: 5%;
       transform: rotateY(180deg);
     }
-  } */
+  }
 
   #metal-gear {
     grid-column: 1;
     grid-row: 3;
+    margin-top: -25rem;
+  }
+
+  .list-view {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .profile {
+    /* max-width: 30%; */
+    /* min-width: 67%; */
+  }
+
+  .profile p {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    padding-right: 0.8rem;
+    margin-top: -25rem;
+  }
+
+  #quote {
+    grid-column: 1 / span 3;
+    grid-row: 4;
   }
 }
