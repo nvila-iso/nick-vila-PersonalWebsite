@@ -186,7 +186,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 1rem;
-  margin: 10rem auto;
+  margin: 5rem auto;
 }
 
 form {
@@ -209,6 +209,12 @@ form input {
 
 form textarea {
   margin-top: 1rem;
+}
+
+form label {
+  margin-top: 1rem;
+  margin-bottom: -0.5rem;
+  text-align: left;
 }
 
 .submit-button {
